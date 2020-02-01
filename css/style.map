@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../sass/style.sass"
+	],
+	"sourcesContent": [
+		"* {\n    box-sizing: border-box; }\n\n.header-title {\n    text-transform: uppercase; }\n"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,CAAC,CAAC;EACE,UAAU,EAAE,UAAU;CAAG;;;AAE7B,AAAA,aAAa,CAAC;EACV,cAAc,EAAE,SAAS;CAAG"
+}
