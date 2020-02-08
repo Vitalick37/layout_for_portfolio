@@ -3,7 +3,8 @@ let mySwiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
         bulletClass: 	'swiper-pagination-bullet',
         bulletActiveClass: 	'swiper-pagination-bullet-active',
-        clickable: true
+        clickable: true,
+        loop: true,
       },
 });
 

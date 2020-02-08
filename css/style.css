@@ -1,20 +1,20 @@
-/* line 1, ../../Web/layout for portfolio/layout_for_portfolio/sass/style.sass */
 * {
   box-sizing: border-box;
 }
 
-/* line 4, ../../Web/layout for portfolio/layout_for_portfolio/sass/style.sass */
 .container {
   margin: 0 auto;
   max-width: 1170px;
 }
 
-/* line 9, ../../Web/layout for portfolio/layout_for_portfolio/sass/style.sass */
+
+/* header
+##################################################################################################### */
 .header {
   display: flex;
+  flex-direction: column;
 }
 
-/* line 13, ../../Web/layout for portfolio/layout_for_portfolio/sass/style.sass */
 .header-title {
   text-transform: uppercase;
   text-align: center;
@@ -27,18 +27,22 @@
   letter-spacing: 2.7px;
 }
 
-/* line 25, ../../Web/layout for portfolio/layout_for_portfolio/sass/style.sass */
+/* featured-works
+##################################################################################################### */
 .featured-works {
   padding: 129px 0 125px 0;
 }
+.featured-works-wrapper {
+  margin-top: 122px;
+}
 
-/* line 28, ../../Web/layout for portfolio/layout_for_portfolio/sass/style.sass */
+
 .section-title,
 .note {
   text-align: center;
 }
 
-/* line 31, ../../Web/layout for portfolio/layout_for_portfolio/sass/style.sass */
+
 .section-title {
   font-family: Montserrat;
   font-size: 38px;
@@ -50,7 +54,7 @@
   margin-bottom: 17px;
 }
 
-/* line 41, ../../Web/layout for portfolio/layout_for_portfolio/sass/style.sass */
+
 .note {
   font-family: Merriweather;
   font-size: 17px;
@@ -59,39 +63,51 @@
   text-transform: uppercase;
   opacity: 0.62;
   letter-spacing: 1.02px;
-  margin-bottom: 122px;
+  margin: 0;
 }
 
-/* line 52, ../../Web/layout for portfolio/layout_for_portfolio/sass/style.sass */
+
 .works {
   margin-bottom: 15px;
+  transition: 1s;
 }
+.works:hover {
+ transform: scale(1.2);
+  z-index: 10;
+}
+
+/* about us
+##################################################################################################### */
 
 
 .about {
   padding: 128px 0 166px 0;
+  background-color: #f8fafa;
 }
-/* line 57, ../../Web/layout for portfolio/layout_for_portfolio/sass/style.sass */
+.about-wrapper {
+  margin-top: 147px;
+}
+
+.layer-wrapper {
+  padding-left: 20px;
+}
+
 .layer {
   position: relative;
- display: flex;
- height: 536px;
- width: 100%;
+  display: flex;
+  height: 536px;
+  width: 100%;
 }
+
 .layers {
-  /* margin: auto; */
   position: absolute;
   z-index: 1;
   top: 35px;
-  
 }
 
-
-/* line 61, ../../Web/layout for portfolio/layout_for_portfolio/sass/style.sass */
+/* slider
+##################################################################################################### */
 .slides {
-  /* position: absolute; */
-  /* top: 0;
-  left: 82px; */
   z-index: 10;
   margin-left: 44px;
 }
@@ -100,14 +116,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 43px;
+  margin-left: -35px;
 }
 
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border-radius: 3px;
-  background-color: #d0d0d0;
   display: inline-block;
   margin: 0 3px 0 3px;
 }
@@ -117,5 +132,37 @@
   background-color: #71f6eb;
 
 }
+.about-wrapper-description {
+  margin-top: 5px;
+}
 
-/*# sourceMappingURL=style.css.map */
+.about-title {
+  opacity: 0.75;
+  font-family: Merriweather;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 31px;
+}
+.about-description {
+  opacity: 0.74;
+font-family: Raleway;
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0.8px;
+margin-bottom: 38px;
+white-space: pre-line;
+}
+.about-subtitle {
+  opacity: 0.75;
+font-family: Merriweather;
+font-size: 17px;
+font-weight: 700;
+line-height: 28px;
+text-transform: uppercase;
+letter-spacing: 1.02px;
+margin-bottom: 27px;
+}
