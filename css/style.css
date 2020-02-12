@@ -46,11 +46,15 @@ header {
   position: relative;
   margin-right: 2px;
   outline: none;
-  
+  display: none;
+  padding: 0;
 }
-.menu-button, .menu-button:active, .menu-button:focus {
+
+.menu-button,
+.menu-button:active,
+.menu-button:focus {
   outline: none;
-} 
+}
 
 .menu-button:after {
   content: "";
@@ -62,8 +66,8 @@ header {
   bottom: 7px;
   border: none;
   position: absolute;
-  
-  
+
+
 }
 
 .menu-button:before {
@@ -76,13 +80,82 @@ header {
   top: 7px;
   border: none;
   position: absolute;
-  
-  
+
+
 }
 
 .menu-nav {
-  display: none;
+  display: flex;
 }
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+}
+
+.menu-item {
+  margin-left: 15px;
+}
+
+.menu-link {
+  text-decoration: none;
+  opacity: 0.75;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.menu-link:focus {
+  outline: none;
+}
+
+/* наведение на меню */
+.menu-link:hover {
+  opacity: 1;
+  color: #000000;
+  text-decoration: none;
+}
+
+.menu-link:after {
+  background-color: #000000;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+
+.menu-link:hover:after,
+.menu-link:focus:after {
+  width: 100%;
+  text-decoration: none;
+  opacity: 1;
+  color: #000000;
+}
+
+/* фиксированное меню */
+/* .fixed {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #eff0f2;
+  opacity: 0.99;
+  padding: 10px 15px 10px 15px;
+ z-index: 100;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 7px 17px -2px rgba(117, 117, 117, 1);
+  -moz-box-shadow: 0px 7px 17px -2px rgba(117, 117, 117, 1);
+  box-shadow: 0px 7px 17px -2px rgba(117, 117, 117, 1);
+} */
 
 .header-bot {
   padding-top: 204px;
@@ -123,11 +196,22 @@ header {
   padding: 20px 48px;
   border-radius: 2px;
   border: 2px solid #777879;
-  outline: none;
 }
-.contact, .contact:active, .contact:focus {
+
+.contact,
+.contact:active,
+.contact:focus {
   outline: none;
-} 
+ 
+}
+.contact:hover {
+  opacity: 1;
+}
+.contact:active {
+  opacity: 0.75;
+}
+
+
 
 
 .juice {
@@ -282,4 +366,40 @@ header {
   text-transform: uppercase;
   letter-spacing: 1.02px;
   margin-bottom: 27px;
+}
+
+@media (max-width: 960px) {
+ 
+  .menu-button {
+    display: block;
+
+    
+}
+.menu-button:before {
+    content: "";
+    display: block;
+    transition: transform 0.2s;
+    
+}
+.menu-button:after {
+    content: "";
+    display: block;
+    transition: transform 0.2s;
+    
+}
+.menu-button-active {
+    height: 0;
+}
+.menu-button-active:before {
+    transform: rotate(45deg);
+    top: 0;
+}
+.menu-button-active:after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+  .menu-nav {
+    display: none;
+  }
 }
