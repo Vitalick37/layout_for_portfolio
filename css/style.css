@@ -368,6 +368,28 @@ header {
   margin-bottom: 27px;
 }
 
+/* team
+######################################################### */
+.team {
+  padding: 122px 0 118px 0;
+}
+
+.team-wrapper {
+  margin-top: 123px;
+}
+
+.team-unit-description {
+  box-shadow: 3px 6px 16px 0px rgba(19,19,21,0.18);
+  width: 359px;
+  height: 265px;
+  opacity: 0.98;
+  background-color: #6df6eb;
+}
+
+.team-unit {
+  margin-bottom: 14px;
+}
+
 @media (max-width: 960px) {
  
   .menu-button {
