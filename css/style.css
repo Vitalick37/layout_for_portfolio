@@ -110,6 +110,7 @@ header {
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .menu-link:focus {
   outline: none;
 }
@@ -202,11 +203,13 @@ header {
 .contact:active,
 .contact:focus {
   outline: none;
- 
+
 }
+
 .contact:hover {
   opacity: 1;
 }
+
 .contact:active {
   opacity: 0.75;
 }
@@ -368,6 +371,215 @@ header {
   margin-bottom: 27px;
 }
 
+/* our_service
+############################################################## */
+
+.service {
+  background-color: #f9fbfb;
+  padding: 123px 0 125px 0;
+}
+
+.service-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 123px;
+}
+
+.service-block {
+  display: flex;
+  text-align: center;
+  margin: 6px 0 6px 0;
+  padding: 0;
+}
+
+
+
+.service-block:nth-child(odd) {
+  margin-right: 12px;
+}
+
+.service-block-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+}
+
+.service-block:nth-child(1), .service-block:nth-child(2) {
+  padding: 120px 0 0 67px;
+}
+.service-block:nth-child(3), .service-block:nth-child(4) {
+  padding: 105px 0 0 65px;
+}
+.service-block:nth-child(5), .service-block:nth-child(6) {
+  padding: 70px 0 0 64px;
+}
+
+
+.block-1 {
+  max-width: 652px;
+  height: 422px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/our_service/home_dietitian_sectionbg_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.block-1-active {
+  background: #6df6eb;
+}
+
+
+.title-active, .text-active {
+  display: none;
+}
+.title-active {
+  opacity: 0.83;
+  color: #000000;
+  font-family: Merriweather;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 38px;
+}
+.text-active {
+  opacity: 0.75;
+color: #000000;
+font-family: Raleway;
+font-size: 16px;
+font-weight: 400;
+
+letter-spacing: 0.4px;
+margin-bottom: 75px;
+}
+.btn-close {
+  display: flex;
+}
+
+.block-2 {
+  max-width: 474px;
+  height: 422px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/our_service/img-9.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.block-2-active {
+  background: #6df6eb;
+}
+
+.block-3 {
+  max-width: 652px;
+  height: 370px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/our_service/griego3_1x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.block-4 {
+  max-width: 474px;
+  height: 370px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/our_service/careers-00.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.block-5 {
+  max-width: 474px;
+  height: 370px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/our_service/griego4_1x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.block-6 {
+  max-width: 652px;
+  height: 370px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/our_service/blog-3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.service-block-title {
+  opacity: 0.95;
+  color: #ffffff;
+  font-family: Merriweather;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 27px;
+}
+
+.service-block-text {
+  opacity: 0.9;
+  color: #ffffff;
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.32px;
+  margin-bottom: 60px;
+}
+
+
+
+.btn-description {
+  display: flex;
+  align-items: center;
+  
+  opacity: 0.9;
+  color: #f9fbfb;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 500;
+  
+  text-transform: uppercase;
+  letter-spacing: 0.72px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+
+.btn-description:hover {
+  color: #b0cfcf;
+  
+}
+.btn-description:active{
+  color: #f9fbfb;
+
+}
+.btn-description:active,
+.btn-description:focus {
+  outline: none;
+  
+}
+
+.btn-description-close {
+  display: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.btn-description-close:active,
+.btn-description-close:focus {
+  outline: none;
+}
+
+.btn-arrow {
+  margin-left: 14px;
+}
+
+
 /* team
 ######################################################### */
 .team {
@@ -379,7 +591,7 @@ header {
 }
 
 .team-unit-description {
-  box-shadow: 3px 6px 16px 0px rgba(19,19,21,0.18);
+  box-shadow: 3px 6px 16px 0px rgba(19, 19, 21, 0.18);
   width: 359px;
   height: 265px;
   opacity: 0.98;
@@ -391,35 +603,40 @@ header {
 }
 
 @media (max-width: 960px) {
- 
+
   .menu-button {
     display: block;
 
-    
-}
-.menu-button:before {
+
+  }
+
+  .menu-button:before {
     content: "";
     display: block;
     transition: transform 0.2s;
-    
-}
-.menu-button:after {
+
+  }
+
+  .menu-button:after {
     content: "";
     display: block;
     transition: transform 0.2s;
-    
-}
-.menu-button-active {
+
+  }
+
+  .menu-button-active {
     height: 0;
-}
-.menu-button-active:before {
+  }
+
+  .menu-button-active:before {
     transform: rotate(45deg);
     top: 0;
-}
-.menu-button-active:after {
+  }
+
+  .menu-button-active:after {
     transform: rotate(-45deg);
     top: 0;
-}
+  }
 
   .menu-nav {
     display: none;
