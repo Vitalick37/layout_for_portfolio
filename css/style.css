@@ -424,14 +424,26 @@ header {
   background-size: cover;
   background-position: center;
 }
-.block-1-active {
+/* .block-1-active {
   background: #6df6eb;
+} */
+.service-block-content_active {
+  display: none;
+  background: #6df6eb;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
 }
-
-
-.title-active, .text-active {
+.show {
+  display: flex;
+}
+.hide {
   display: none;
 }
+
+/* .title-active, .text-active {
+  display: none;
+} */
 .title-active {
   opacity: 0.83;
   color: #000000;
@@ -449,12 +461,21 @@ color: #000000;
 font-family: Raleway;
 font-size: 16px;
 font-weight: 400;
-
 letter-spacing: 0.4px;
 margin-bottom: 75px;
 }
 .btn-close {
   display: flex;
+}
+.btn-description-close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.btn-description-close:active,
+.btn-description-close:focus {
+  outline: none;
 }
 
 .block-2 {
@@ -465,9 +486,9 @@ margin-bottom: 75px;
   background-size: cover;
   background-position: center;
 }
-.block-2-active {
+/* .block-2-active {
   background: #6df6eb;
-}
+} */
 
 .block-3 {
   max-width: 652px;
@@ -563,17 +584,7 @@ margin-bottom: 75px;
   
 }
 
-.btn-description-close {
-  display: none;
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
 
-.btn-description-close:active,
-.btn-description-close:focus {
-  outline: none;
-}
 
 .btn-arrow {
   margin-left: 14px;

@@ -64,37 +64,54 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // информация о сервисе
 
-  let btnDesc = document.querySelectorAll('.btn-description')[0],
-    servBlockTitle = document.querySelectorAll('.service-block-title')[0],
-    servBlockText = document.querySelectorAll('.service-block-text')[0],
-    titleActive = document.querySelectorAll('.title-active')[0],
-    textActive = document.querySelectorAll('.text-active')[0],
-    btnDescClose = document.querySelector('.btn-description-close'),
-    blockDesc = document.querySelector('.block-1');
+  let btnDesc = document.querySelectorAll('.btn-description'),
+    btnDescClose = document.querySelectorAll('.btn-description-close'),
+    blockDesc = document.querySelectorAll('.service-block-content'),
+    blockDescActive = document.querySelectorAll('.service-block-content_active');
+    // btnArrow = document.querySelectorAll('.btn-arrow'),
+    // btnClose = document.querySelectorAll('.btn-close');
 
-    const openDesc = (event) => {
-      event.preventDefault();
-      blockDesc.classList.add('block-1-active');
-      btnDesc.style.display = 'none';
-      servBlockTitle.style.display = 'none';
-      servBlockText.style.display = 'none';
-      btnDescClose.style.display = 'block';
-      titleActive.style.display = 'block';
-      textActive.style.display = 'block';
-  
+  function openDesc(a) {
+    blockDesc[a].classList.remove('show');
+    blockDesc[a].classList.add('hide');
+    blockDescActive[a].classList.add('show');
+    blockDescActive[a].classList.remove('hide');
+  };
+
+  function closeDesc(b) {
+    if (blockDescActive[b].classList.contains('show')) {
+      blockDescActive[b].classList.remove('show');
+      blockDescActive[b].classList.add('hide');
+      blockDesc[b].classList.remove('hide');
+      blockDesc[b].classList.add('show');
     };
-    const closeDesc = (event) => {
-      event.preventDefault();
-      blockDesc.classList.remove('block-1-active');
-      btnDesc.style.display = '';
-      servBlockTitle.style.display = '';
-      servBlockText.style.display = '';
-      btnDescClose.style.display = 'none';
-      titleActive.style.display = 'none';
-      textActive.style.display = 'none';
-    };
-  btnDesc.addEventListener('click', openDesc);
-  btnDescClose.addEventListener('click', closeDesc);
+  };
+
+
+  document.addEventListener('click', (event) => {
+    let target = event.target;
+    if (target && target.classList.contains('btn-description')) {
+        for (let i = 0; i < btnDesc.length; i++) {
+          if (target == btnDesc[i]) {
+            openDesc(i);
+            // closeDesc(i);
+            break;
+          };
+        };
+      };
+  });
+  document.addEventListener('click',  (event) => {
+    let target = event.target;
+    if (target && target.classList.contains('btn-description-close')) {
+        for (let i = 0; i < btnDescClose.length; i++) {
+          if (target == btnDescClose[i]) {
+            // openDesc(i);
+            closeDesc(i);
+            break;
+          };
+        };
+      };
+  });
 
 
 
